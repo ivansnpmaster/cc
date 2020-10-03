@@ -46,9 +46,7 @@ class Circle
         dirC.setMag(rc);
 
         PVector pc = pC.add(dirC);
-
         pc.rotate(-gA);
-
         points.add(pc.copy());
 
         float aDiff = j * ((sin(frameCount / this.speedA) + 1) / 2.0 - 0.5) * (TWO_PI / this.n);

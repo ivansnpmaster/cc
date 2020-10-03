@@ -13,7 +13,7 @@ float speedA = 120;
 float rows = 4;
 float cols = 4;
 
-Circle[] circles = new Circle[ int((rows - 1) * (cols - 1))];
+Circle[] circles = new Circle[int((rows - 1) * (cols - 1))];
 
 void setup()
 {
@@ -31,6 +31,9 @@ void setup()
 
       circles[i] = new Circle(nn, cc, rr, speedS, speedA);
     }
+
+  noStroke();
+  fill(0, 50);
 }
 
 void draw()
@@ -38,14 +41,12 @@ void draw()
   println(frameCount);
 
   background(240);
-  noStroke();
-  fill(0, 50);
 
   for (int ro = 0; ro < rows-1; ro++)
     for (int co = 0; co < cols-1; co++)
     {
       float x = ro * width / cols + width / cols;
-      float y = co * height / rows +  height / rows;
+      float y = co * height / rows + height / rows;
 
       pushMatrix();
       translate(x, y);
