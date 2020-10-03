@@ -17,7 +17,7 @@ Circle[] circles = new Circle[ int((rows - 1) * (cols - 1))];
 
 void setup()
 {
-  size(1200, 1200);
+  size(700, 700);
   r = width / (rows + cols) - 5;
 
   for (int ro = 0; ro < rows-1; ro++)

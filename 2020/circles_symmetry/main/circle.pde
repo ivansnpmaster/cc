@@ -37,8 +37,6 @@ class Circle
 
       ArrayList<PVector> points = new ArrayList<PVector>();
 
-      noStroke();
-
       for (int j = 0; j < c; j++)
       {
         PVector dirC = dir.copy();
@@ -60,8 +58,6 @@ class Circle
         ellipse(pc.x, pc.y, j * this.r * 2 / this.c, j * this.r * 2 / this.c);
       }
 
-      stroke(0);
-
       PVector b = points.get(0);
       PVector e = points.get(points.size()-1);
 
@@ -69,14 +65,11 @@ class Circle
       g.add(gp);
     }
 
-    noStroke();
     beginShape();
 
     for (PVector p : g)
       vertex(p.x, p.y);
 
     endShape(CLOSE);
-
-    g.clear();
   }
 }
